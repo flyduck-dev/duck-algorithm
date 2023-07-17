@@ -1,10 +1,9 @@
-from collections import defaultdict
+from collections import defaultdict, Counter
 
 def sol(nums):
     ans = -1
     dic = defaultdict(int)
-    for i in nums:
-        dic[i] += 1
+    dic = Counter(nums)
     for key in dic:
         if dic[key] == 1:
             ans = max(ans, key)
