@@ -6,9 +6,9 @@ def sol(nums, target):
         if nums[mid] == target:
             return mid
         elif nums[mid] < target:
-            start += 1
+            start = mid + 1
         else:
-            end -= 1
+            end = mid - 1
     
 print(sol([2,5,7,8,10,15,20,24,25,30], 8))
 print(sol([-3,0,2,5,8,9,12,15], 0))
